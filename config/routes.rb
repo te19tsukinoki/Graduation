@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/new'
   root "application#hello"
+  get 'users/new'
+  get  "/signup",  to: "users#new"
 end
