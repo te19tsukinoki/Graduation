@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'users/new'
   get  "/signup",  to: "users#new"
   resources :users
+  resources :subjects, param: :name
 end
