@@ -1,5 +1,12 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <a>ようこそ</a>
+    <div>出席管理システム</div>
+      <ul class="nav navbar-nav navbar-right">
+        <% if logged_in? %>       
+          <li><%= link_to "Log out", logout_path,data: { "turbo-method": :delete } %></li>
+        <% else %>
+          <li><%= link_to "Log in", login_path %></li>
+        <% end %>
+      </ul>
   </div>
 </header>
