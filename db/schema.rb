@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_02_14_011010) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_15_081033) do
   create_table "attendances", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "数学"
-    t.integer "国語"
-    t.integer "英語"
+    t.integer "math"
+    t.integer "japanese"
+    t.integer "english"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_attendances_on_user_id"
