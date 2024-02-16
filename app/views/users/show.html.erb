@@ -6,8 +6,32 @@
         <%= @user.name %>
       </h1>
       <h2>
-        この下に出席数を表示
+        出席数       
       </h2>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>教科</th>
+            <th>出席数</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>応用数学</td>
+            <td><%= @user.attendance_data[:math] %></td>
+          </tr>
+          <tr>
+            <td>国語</td>
+            <td><%= @user.attendance_data[:japanese] %></td>
+          </tr>
+          <tr>
+            <td>英語</td>
+            <td><%= @user.attendance_data[:english] %></td>
+          </tr>
+          <!-- 他の教科も同様に追加する -->
+        </tbody>
+      </table>
     </section>
   </aside>
 </div>

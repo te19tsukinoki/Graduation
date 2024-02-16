@@ -17,4 +17,13 @@ class User < ApplicationRecord
 
   has_one :attendance
 
+  def attendance_data
+    attendance_data = {}
+    attendance_data[:math] = attendance&.math || 0
+    attendance_data[:japanese] = attendance&.japanese || 0
+    attendance_data[:english] = attendance&.english || 0
+    # 他の教科も同様に追加する
+    attendance_data
+  end
+
 end
